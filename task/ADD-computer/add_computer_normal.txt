@@ -1,0 +1,18 @@
+Currently we recommend Debian / Mempo primarly.
+
+Hardened Gentoo is very interesting as well.
+
+OpenBSD is interesting for admin's computer (possibly the documentation for that is separated out, probably most documentation here assumes linux).
+
+* prepare debian net-install or DVD-1 (or more)
+* write down (on paper) checksum of the recorded media
+* possibly verify it and write+compare on another, trusted computer (best in read-only device)
+
+* air-gap (disconnect network devices) during installation 
+* install system (e.g. debian amd64)
+* install mempo (or other hardened kernel)
+* configure basic firewall
+* turn back on the network
+
+* %%%include_here_and_follow_instructions_from_file%%% ../install-list/basic.txt
+
