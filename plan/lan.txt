@@ -1,0 +1,54 @@
+
+This are our suggestions for possible layout (IP assigment etc)
+for local LAN.
+Adapt to own needs.
+
+Less trusted computers are better to isolate to own IP segment
+(or better own LAN airgapped from others etc)
+
+=== .1 - .7 primary network structure ===
+
+.1 - gateway
+.1 - DNS
+.2 - DNS other
+
+=== .8 - .15 netops servers ===
+
+.8 - www proxy (caching)
+.9 - access proxy tor
+.10 - access proxy i2p
+.11 - access proxy freenet
+
+=== .16 - .31  servers ===
+
+.20 - FTP/files
+.21 - internal www
+.2* - other internal servers
+
+=== .32 - .128 computers ===
+
+.32 - main admin (ssh from here)
+.4* - primary / lear / ceo
+.5* - common
+.6* - common
+.8* - common / servers
+.9* - servers
+.10* - VMs
+.11* - VMs / test
+
+=== .128 - .191 lower trust (but in same network segment) ===
+
+.13* test computers
+.14* ^
+.15* ^
+.16* mobile
+.17* ^
+.18* ^
+
+=== .208 - .223 guests (but in same network segment) ===
+
+.21* - guests (laptops)
+
+
+
+
