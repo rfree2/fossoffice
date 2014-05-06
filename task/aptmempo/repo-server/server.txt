@@ -1,0 +1,44 @@
+
+cat ~/repo-prepare/repos/apt/debian/conf/distributions 
+Origin: mempo
+Label: mempo
+Codename: wheezy
+Architectures: i386 amd64
+Components: main
+Description: Apt repository for project mempo.org
+SignWith: CA9684CD2F2D59BC858A2E9192019099F389E571
+
+
+(change "repoadmin" to user name)
+cat ~/repo-prepare/repos/apt/debian/conf/options 
+verbose
+basedir /home/repoadmin/repo-prepare/repos/apt/debian/
+ask-passphrase
+
+
+As repoadmin:
+
+~/repo-prepare/repos/apt/debian$ ls
+conf  db  dists  pool
+
+ls /var/www/
+debian  debian-multisig  pubkey
+
+ls /var/www/*
+/var/www/debian:
+conf  db  dists  pool
+
+/var/www/debian-multisig:
+linux-headers-3.2.58-grsec-mempo.desk.0.1.43_01_amd64.deb.sig  linux-image-3.2.58-grsec-mempo.desk.0.1.43_01_amd64.deb.sig
+
+/var/www/pubkey:
+testrepo1_mempo_org_D0CEC90F.pub
+
+Execute to build the repo:
+reprepro includedeb wheezy ~/repo-prepare/install-dpkg-signed/*deb
+(in directory ~/repo-prepare/repos/apt/debian/)
+
+Execute to integrate prepared repo to www hosting:
+rsync -r  ~/repo-prepare/repos/apt/debian /var/www/
+
+
