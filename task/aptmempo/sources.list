@@ -1,0 +1,21 @@
+# 
+
+# deb cdrom:[Debian GNU/Linux 7.2.0 _Wheezy_ - Official amd64 DVD Binary-1 20131012-14:05]/ wheezy contrib main
+
+# deb cdrom:[Debian GNU/Linux 7.2.0 _Wheezy_ - Official amd64 DVD Binary-1 20131012-14:05]/ wheezy contrib main
+
+deb http://security.debian.org/ wheezy/updates main contrib
+deb-src http://security.debian.org/ wheezy/updates main contrib
+
+#deb http://ftp.pl.debian.org/debian wheezy main 
+#deb-src http://ftp.pl.debian.org/debian wheezy main 
+
+deb http://ftp.pl.debian.org/debian wheezy-backports main
+
+deb http://ftp.pl.debian.org/debian wheezy main contrib non-free
+deb-src http://ftp.pl.debian.org/debian wheezy main contrib non-free 
+
+
+#deb http://127.0.0.1/repos/apt/debian wheezy main
+deb http://192.168.5.41/debian wheezy main
+
