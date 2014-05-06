@@ -1,0 +1,17 @@
+
+=== Auto-install normal Debian upgrades in the usuall Debian way: ===
+
+https://wiki.debian.org/UnattendedUpgrades
+apt-get install unattended-upgrades
+dpkg-reconfigure -plow unattended-upgrades
+
+=== Auto-install Debian upgrades with multisign and checksums  ===
+
+TODO
+(against selective compromise of Debian server, e.g. Deian server sending malicious version of file
+to some users but normal to other users = silent compromise of some compters while appearing to work
+normally to other computers, reviews, admins, testers)
+
+===  ===
+
+
