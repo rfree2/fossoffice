@@ -1,4 +1,9 @@
 
+Commands cheetshit:
+gpg --fingerprint --fingerprint
+dpkg-sig -k F389E571 --sign builder linux-headers-3.2.58-grsec-mempo.desk.0.1.43_01_amd64.deb
+
+
 cat ~/repo-prepare/repos/apt/debian/conf/distributions 
 Origin: mempo
 Label: mempo

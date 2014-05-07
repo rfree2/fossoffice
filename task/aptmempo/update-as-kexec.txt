@@ -1,0 +1,6 @@
+
+n=3.2.57-grsec-mempo.desk.0.1.40
+kexec -l /boot/vmlinuz-$n  --initrd=/boot/initrd.img-$n  --command-line="$( cat /proc/cmdline )"
+kexec -e
+
+kexec -l /boot/vmlinuz-3.2.57-grsec-mempo.desk.0.1.40  --initrd=/boot/initrd.img-3.2.57-grsec-mempo.desk.0.1.40   --command-line="$( cat /proc/cmdline )"
