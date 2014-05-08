@@ -1,1 +1,1 @@
-fattr vlock wvdial
+fattr vlock wvdial beep sharutils
