@@ -1,0 +1,10 @@
+syntax on
+
+set shiftwidth=2
+set tabstop=2
+set autoindent
+
+source ~/.vim/bin/minibufexpl.vim
+
+map <C-PageDown> :bnext<CR>
+map <C-PageUp> :bprev<CR>
