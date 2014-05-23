@@ -6,5 +6,21 @@ set autoindent
 
 source ~/.vim/bin/minibufexpl.vim
 
-map <C-PageDown> :bnext<CR>
-map <C-PageUp> :bprev<CR>
+imap <C-PageDown> <ESC><C-PageDown>
+map <C-PageDown> :bnext!<CR>
+imap <C-PageUp> <ESC><C-PageUp>
+map <C-PageUp> :bprev!<CR>
+
+imap <F8> <ESC><F8>
+map <F8> :w<CR>:make run<CR>
+imap <F9> <ESC><F9>
+map <F9> :w<CR>:make run<CR>
+map <S-F9> :cn<CR>
+map <C-F9> :cp<CR>
+
+imap ` <C-N>
+
+set hlsearch
+nnoremap <C-M> :let @/='\<<C-R>=expand("<cword>")<CR>\>'<CR>:set hls<CR>
+nnoremap <C-N> :noh<CR>
+
