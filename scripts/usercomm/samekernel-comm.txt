@@ -1,0 +1,52 @@
+
+BOT:
+
+flag:
+	gitrepo
+	gitver
+--> comm/kernelbuild/mempobuild/orderXXXXX.txt
+
+
+
+BUILD:
+for order in comm/kernelbuild/mempobuild/order*txt ...
+
+	rm $order
+	replyfile=".../to/user1/..." # reply to bot
+	donefile=".../to/user1/..." # reply to bot
+	echo "ok" > $replyfile
+
+	git clone $gitrepo ...
+	git checkout $gitver ...
+
+	cd ...
+	./make-clean &> /dev/null  # DO NOT LEAK FILE NAME AND FREE SPACE TO LOGS
+	./run.sh  >> $donefile
+	...
+	echo "DONE" >> $donefile
+	rm $replyfile
+
+
+
+BOT:
+	...... (command send) ......
+
+	while ... ! -r $reply { .... }
+
+	echo "Got reply - build should be running!"
+
+	# (TODO) when build takes longer then XX hours then kill it...
+
+	while ... ! -r $done { .... }
+	echo "The build process had finished."
+
+
+
+
+
+
+
+
+
+
+
