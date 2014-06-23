@@ -1,15 +1,23 @@
 syntax on
 
+set nocompatible
+
 set shiftwidth=2
 set tabstop=2
 set autoindent
 
 source ~/.vim/bin/minibufexpl.vim
+source ~/.vim/bundle/lastpos.vim 
+
+
+ " source ~/.vim/bundle/vim-bookmarks/autoload/bm_sign.vim 
+ " source ~/.vim/bundle/vim-bookmarks/plugin/bookmark.vim
+
 
 imap <C-PageDown> <ESC><C-PageDown>
-map <C-PageDown> :bnext!<CR>
+map <C-PageDown> :w<CR>:bnext!<CR>
 imap <C-PageUp> <ESC><C-PageUp>
-map <C-PageUp> :bprev!<CR>
+map <C-PageUp> :w<CR>:bprev!<CR>
 
 imap <F8> <ESC><F8>
 map <F8> :w<CR>:make run<CR>
@@ -18,9 +26,28 @@ map <F9> :w<CR>:make run<CR>
 map <S-F9> :cn<CR>
 map <C-F9> :cp<CR>
 
+map <F2> :w<CR>
+imap <F2> <ESC><F2>i
+
 imap ` <C-N>
 
 set hlsearch
 nnoremap <C-M> :let @/='\<<C-R>=expand("<cword>")<CR>\>'<CR>:set hls<CR>
 nnoremap <C-N> :noh<CR>
+
+set nu
+
+" call pathogen#infect() 
+" www.vim.org/scripts/script.php?script_id=4893
+"let g:bookmark_auto_save = 1
+"let g:bookmark_highlight_lines = 0
+" ctrl-B is toggling bookmarks
+"imap <C-B> <Esc><C-B>i
+"map <C-Up> mp
+"map <C-Down> mn
+"imap <C-Up> <Esc><C-Up>i
+"imap <C-Down> <Esc><C-Down>i
+
+" map <C-B> :ToggleBookmark<CR>
+" use mm in normal mode
 
